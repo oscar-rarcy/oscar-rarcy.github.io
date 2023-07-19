@@ -1,2 +1,2 @@
 # oscar-rarcy.github.io
-// Private Website. 
+Small personal website for showing design projects. 
