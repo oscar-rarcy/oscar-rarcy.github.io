@@ -1,0 +1,41 @@
+// ChatGPT:
+
+@use 'base';
+
+/* Image Slider */
+
+.Slider {
+  display: grid;
+  // Rows position arrow <div> below images.
+  grid-template-rows: auto auto;
+
+  .ProjectImages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e1e1e1;
+
+    .Image {
+      max-width: 95%;
+      max-height: 95%;
+    }
+  }
+
+  .Arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .LeftArrow,
+    .RightArrow {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 200;
+      font-size: 10 * 2pt;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+

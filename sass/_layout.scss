@@ -1,0 +1,169 @@
+/* Container/Grid Systems */
+
+@use 'base';
+
+/* Universal Styles -- Shared by media queries. */
+
+* {
+  @include base.reset;
+  @include base.MTGrotesque;
+}
+
+a {
+  @include base.MTGrotesque;
+}
+
+a:hover {
+  font-style: oblique;
+}
+
+body {
+  width: base.$base-width;
+  //max-width: 1920px;
+  margin: 2em auto auto auto;
+}
+
+header {
+  position: fixed;
+  width: base.$base-width;
+  //max-width:  1920px;
+}
+
+.Content {
+  padding: 4em 0 0 0;
+}
+
+.Project {
+  margin: 0 0 2em 0;
+}
+
+.Arrows {
+  padding: 1em 0;
+}
+
+footer {
+  padding: 2em 0;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Project {
+    display: grid;
+    grid-auto-rows: auto auto auto;
+
+    .ProjectText {
+      order: 2;
+
+      h2 {
+        padding: 1em 0;
+      }
+
+    }
+
+    .Slider {
+      padding-top: 2em;
+      order: 1;
+      width: base.$base-width;
+
+      .ProjectImages {
+        height: 40vh;
+      }
+
+    }
+
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Project {
+    display: grid;
+    grid-auto-rows: auto auto auto;
+
+    .ProjectText {
+      order: 2;
+
+      h2 {
+        padding: 1em 0;
+      }
+    }
+
+    .Slider {
+      padding-top: 2em;
+      order: 1;
+      width: base.$base-width;
+
+      .ProjectImages {
+        height: 60vh;
+      }
+
+    }
+
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 4em auto auto;
+  }
+
+  .Content {
+    position: relative;
+    width: base.$base-width;
+  }
+
+  nav {
+    position: fixed;
+    width: base.$text-column-width;
+    padding: 0 4em 0 0;
+  }
+
+  main {
+    margin-left: base.$text-column-width;
+  }
+
+  .Project {
+    display: grid;
+    grid-template-columns: base.$text-column-width base.$image-column-width;
+
+
+    .ProjectText {
+      padding: 0 4em 0 0;
+
+      h2 {
+        padding: 0 0 1em 0;
+      }
+    }
+
+    .ProjectImages {
+      height: 60vh;
+    }
+  }
+}
+

@@ -1,0 +1,42 @@
+/* Resets, Variables, Mixins, Utility */
+
+$storm-blue: #005493;
+$regular-blue: #1a7bb0;
+$base-width: 95vw;
+
+$text-column-width: $base-width / 4;
+$image-column-width: $base-width / 2;
+
+
+@mixin Helvetica {
+  font-family: Helvetica, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  color: #000;
+  text-decoration: none;
+}
+
+@mixin MTGrotesque {
+  font-family: "monotype-grotesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10pt;
+  color: #000;
+  text-decoration: none;
+}
+
+
+@mixin IBMPlex {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10pt;
+  font-weight: 400;
+  font-variant-alternates: historical-forms;
+  color: $storm-blue;
+  text-decoration: none;
+}
+
+@mixin reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

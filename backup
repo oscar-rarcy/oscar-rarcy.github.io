@@ -1,0 +1,48 @@
+@use 'base';
+
+/* Image Slider */
+
+.Slider {
+  display: grid;
+  grid-template-rows: auto auto;
+
+  .ProjectImages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    //Height attribute necessary, applied in _layout
+    background-color: #e1e1e1;
+    .Image {
+      max-width: 95%;
+      max-height: 95%;
+    }
+  }
+
+  %ArrowShared {
+    font-family: 'IBM Plex Sans', sans-serif;;
+    font-weight: 200;
+    font-size: 10 * 2pt;
+  }
+
+  .Arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .LeftArrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %ArrowShared;
+    }
+
+    .RightArrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %ArrowShared;
+    }
+  }
+
+}

@@ -1,0 +1,177 @@
+/* Resets, Variables, Mixins, Utility */ /* Container/Grid Systems */
+/* Universal Styles -- Shared by media queries. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "monotype-grotesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10pt;
+  color: #000;
+  text-decoration: none;
+}
+
+a {
+  font-family: "monotype-grotesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10pt;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: oblique;
+}
+
+body {
+  width: 95vw;
+  margin: 2em auto auto auto;
+}
+
+header {
+  position: fixed;
+  width: 95vw;
+}
+
+.Content {
+  padding: 4em 0 0 0;
+}
+
+.Project {
+  margin: 0 0 2em 0;
+}
+
+.Arrows {
+  padding: 1em 0;
+}
+
+footer {
+  padding: 2em 0;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Project {
+    display: grid;
+    grid-auto-rows: auto auto auto;
+  }
+  .Project .ProjectText {
+    order: 2;
+  }
+  .Project .ProjectText h2 {
+    padding: 1em 0;
+  }
+  .Project .Slider {
+    padding-top: 2em;
+    order: 1;
+    width: 95vw;
+  }
+  .Project .Slider .ProjectImages {
+    height: 40vh;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Project {
+    display: grid;
+    grid-auto-rows: auto auto auto;
+  }
+  .Project .ProjectText {
+    order: 2;
+  }
+  .Project .ProjectText h2 {
+    padding: 1em 0;
+  }
+  .Project .Slider {
+    padding-top: 2em;
+    order: 1;
+    width: 95vw;
+  }
+  .Project .Slider .ProjectImages {
+    height: 60vh;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 4em auto auto;
+  }
+  .Content {
+    position: relative;
+    width: 95vw;
+  }
+  nav {
+    position: fixed;
+    width: 23.75vw;
+    padding: 0 4em 0 0;
+  }
+  main {
+    margin-left: 23.75vw;
+  }
+  .Project {
+    display: grid;
+    grid-template-columns: 23.75vw 47.5vw;
+  }
+  .Project .ProjectText {
+    padding: 0 4em 0 0;
+  }
+  .Project .ProjectText h2 {
+    padding: 0 0 1em 0;
+  }
+  .Project .ProjectImages {
+    height: 60vh;
+  }
+}
+/* Image Slider */
+.Slider {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.Slider .ProjectImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1e1e1;
+}
+.Slider .ProjectImages .Image {
+  max-width: 95%;
+  max-height: 95%;
+}
+.Slider .Arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Slider .Arrows .LeftArrow,
+.Slider .Arrows .RightArrow {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-size: 20pt;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
